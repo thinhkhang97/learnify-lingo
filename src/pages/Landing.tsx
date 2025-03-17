@@ -1,14 +1,11 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Gamepad, BookOpen, Brain, Rocket, Check, ArrowRight } from "lucide-react";
 import { LandingNavbar } from "@/components/layout/LandingNavbar";
-
 const Landing = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <LandingNavbar />
       
       {/* Hero Section */}
@@ -39,11 +36,7 @@ const Landing = () => {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-purple-500 opacity-50 blur"></div>
                 <div className="relative bg-card rounded-xl overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" 
-                    alt="Learning illustration" 
-                    className="w-full h-auto"
-                  />
+                  
                 </div>
               </div>
             </div>
@@ -62,42 +55,12 @@ const Landing = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={BookOpen} 
-              title="Vocabulary Management" 
-              description="Save, organize, and review words you want to learn."
-              delay={100}
-            />
-            <FeatureCard 
-              icon={Gamepad} 
-              title="Interactive Games" 
-              description="Learn through play with our engaging word games."
-              delay={200}
-            />
-            <FeatureCard 
-              icon={Brain} 
-              title="Smart Review" 
-              description="Algorithms that help you review when you need it most."
-              delay={300}
-            />
-            <FeatureCard 
-              icon={Rocket} 
-              title="Track Progress" 
-              description="See your improvement with detailed statistics."
-              delay={400}
-            />
-            <FeatureCard 
-              icon={Check} 
-              title="Daily Challenges" 
-              description="Build a learning habit with daily word challenges."
-              delay={500}
-            />
-            <FeatureCard 
-              icon={GraduationCap} 
-              title="Learn Your Way" 
-              description="Personalized learning paths based on your needs."
-              delay={600}
-            />
+            <FeatureCard icon={BookOpen} title="Vocabulary Management" description="Save, organize, and review words you want to learn." delay={100} />
+            <FeatureCard icon={Gamepad} title="Interactive Games" description="Learn through play with our engaging word games." delay={200} />
+            <FeatureCard icon={Brain} title="Smart Review" description="Algorithms that help you review when you need it most." delay={300} />
+            <FeatureCard icon={Rocket} title="Track Progress" description="See your improvement with detailed statistics." delay={400} />
+            <FeatureCard icon={Check} title="Daily Challenges" description="Build a learning habit with daily word challenges." delay={500} />
+            <FeatureCard icon={GraduationCap} title="Learn Your Way" description="Personalized learning paths based on your needs." delay={600} />
           </div>
         </div>
       </section>
@@ -118,24 +81,22 @@ const Landing = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
 
 // Feature card component
-const FeatureCard = ({ 
-  icon: Icon, 
-  title, 
+const FeatureCard = ({
+  icon: Icon,
+  title,
   description,
   delay = 0
-}: { 
-  icon: React.ElementType; 
-  title: string; 
+}: {
+  icon: React.ElementType;
+  title: string;
   description: string;
   delay?: number;
 }) => {
-  return (
-    <Card className={`hover-scale animate-slide-up animate-delay-${delay}`}>
+  return <Card className={`hover-scale animate-slide-up animate-delay-${delay}`}>
       <CardContent className="pt-6">
         <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
           <Icon className="h-6 w-6 text-primary" />
@@ -143,8 +104,6 @@ const FeatureCard = ({
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
-
 export default Landing;
