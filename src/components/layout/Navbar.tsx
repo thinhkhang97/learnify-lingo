@@ -48,16 +48,16 @@ export const Navbar = () => {
                   <GraduationCap className="h-6 w-6" />
                   <span>LearnSmart</span>
                 </Link>
-                <Link to="/" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
+                <Link to="/app/dashboard" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
                   Dashboard
                 </Link>
-                <Link to="/vocabulary" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
+                <Link to="/app/vocabulary" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
                   My Words
                 </Link>
-                <Link to="/games" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
+                <Link to="/app/games" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
                   Games
                 </Link>
-                <Link to="/practice" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
+                <Link to="/app/practice" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-muted">
                   Practice
                 </Link>
               </nav>

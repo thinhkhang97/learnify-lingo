@@ -19,11 +19,11 @@ export const Sidebar = () => {
   const { user } = useUser();
   
   const links = [
-    { name: 'Dashboard', path: '/', icon: LayoutDashboard },
-    { name: 'My Words', path: '/vocabulary', icon: BookOpen },
-    { name: 'Games', path: '/games', icon: Gamepad2 },
-    { name: 'Practice', path: '/practice', icon: Dumbbell },
-    { name: 'Statistics', path: '/statistics', icon: BarChart },
+    { name: 'Dashboard', path: '/app/dashboard', icon: LayoutDashboard },
+    { name: 'My Words', path: '/app/vocabulary', icon: BookOpen },
+    { name: 'Games', path: '/app/games', icon: Gamepad2 },
+    { name: 'Practice', path: '/app/practice', icon: Dumbbell },
+    { name: 'Statistics', path: '/app/statistics', icon: BarChart },
   ];
 
   return (
@@ -71,7 +71,7 @@ export const Sidebar = () => {
           )}
           
           <Link
-            to="/settings"
+            to="/app/settings"
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground hover:bg-muted"
           >
             <Settings className="h-4 w-4" />

@@ -18,6 +18,7 @@ import { WordQuizGame } from "@/components/games/WordQuizGame";
 import { FlashCardsGame } from "@/components/games/FlashCardsGame";
 import { WordMatchGame } from "@/components/games/WordMatchGame";
 import { FillBlanksGame } from "@/components/games/FillBlanksGame";
+import Landing from "./pages/Landing";
 
 const queryClient = new QueryClient();
 
@@ -28,7 +29,8 @@ const App = () => (
         <UserProvider>
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<AppLayout />}>
+              <Route path="/" element={<Landing />} />
+              <Route path="/app" element={<AppLayout />}>
                 <Route index element={<Index />} />
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="vocabulary" element={<Vocabulary />} />
