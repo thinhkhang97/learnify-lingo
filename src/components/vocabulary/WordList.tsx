@@ -151,6 +151,8 @@ interface WordGridProps {
 }
 
 const WordGrid: React.FC<WordGridProps> = ({ words, onWordClick, onMarkLearned }) => {
+  const navigate = useNavigate();
+  
   if (words.length === 0) {
     return (
       <Card>
@@ -218,7 +220,3 @@ const WordGrid: React.FC<WordGridProps> = ({ words, onWordClick, onMarkLearned }
     </div>
   );
 };
-
-// TypeScript throws an error if navigate is used directly in the function component
-// This is a trick to make it available in the inner component
-const navigate = useNavigate();
