@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { User, Word, GameScore, LearningGoal, InterestType } from '@/types';
 
@@ -80,7 +79,7 @@ const mockWords: Word[] = [
     id: '5',
     word: 'pragmatic',
     definition: 'dealing with things sensibly and realistically',
-    examples: ['A pragmatic approach to solving problems', 'She's very pragmatic about financial matters'],
+    examples: ['A pragmatic approach to solving problems', 'She\'s very pragmatic about financial matters'],
     level: 'intermediate',
     learned: false,
     createdAt: new Date('2023-05-15'),
